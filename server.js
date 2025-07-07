@@ -9,10 +9,10 @@ const io = socketIo(server, {
     cors: {
         origin: [
           "http://localhost:3000",
-          "https://your-vercel-site.vercel.app"
+          "https://live-board-pf6oba47c-ashutosh-singhs-projects-fbd66878.vercel.app"
         ],
         methods: ["GET", "POST"]
-    }
+      }
 });
 
 io.on('connection', (socket) => {
