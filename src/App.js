@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 import './App.css';
 
-const socket = io('http://localhost:5000'); // Connect to your backend server
+const socket = io('https://liveboard-u2xc.onrender.com'); // Connect to your backend server
 
 function App() {
   const canvasRef = useRef(null);
