@@ -6,10 +6,13 @@ const socketIo = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
-  cors: {
-    origin: "http://localhost:3000", // Allow requests from your React app's origin
-    methods: ["GET", "POST"]
-  }
+    cors: {
+        origin: [
+          "http://localhost:3000",
+          "https://your-vercel-site.vercel.app"
+        ],
+        methods: ["GET", "POST"]
+    }
 });
 
 io.on('connection', (socket) => {
